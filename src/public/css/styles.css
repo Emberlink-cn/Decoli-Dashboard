@@ -45,8 +45,13 @@ body::-webkit-scrollbar{
     background-attachment: fixed;
     background-size: cover;
     /* visibility: hidden; */
+    transition: 0.7s;
 }
 
+.hideModal{
+    top: -120vh;
+
+}
 
 /* botão de atalho para mapa (vendedores) */
 #link_mapas{
@@ -153,6 +158,12 @@ input::placeholder{
 
 }
 
+.login_box footer{
+    margin-top: 2rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 200;
+}
 
 .navegador{
     position: fixed;
@@ -160,7 +171,9 @@ input::placeholder{
     height: 3rem;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: start;
+    gap: 2rem;
+    padding-left: 12rem;
     background-color: #26228f;
     box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.192);
 }
@@ -205,3 +218,4 @@ input::placeholder{
     width: 100vw;
     height: 100%;
 }
+
