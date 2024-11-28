@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+    width: 200vw;
+    height: 100vh;
+    display: flex;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.mandali-regular {
+    font-family: "Mandali", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
+/* modal de abertura */
+.login_modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    width: 100vw;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #26228f;
+    background-image: url(https://www.drul.com.br/wp-content/uploads/2023/02/daszf-copia.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    /* visibility: hidden; */
+}
+
+
+/* botão de atalho para mapa (vendedores) */
+#link_mapas{
+    position: absolute;
+    top: 3rem;
+    right: 5rem;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    animation: pulsar 2s infinite;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.616);
+}
+
+@keyframes pulsar{
+    0%{
+        scale:0.9
+    }
+    50%{
+        scale: 1;
+    }
+    100%{
+        scale: 0.9;
+    }
+}
+
+.login_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    width: 30rem;
+    height: 100%;
+    /* gap: 1rem; */
+    padding: 1rem;
+    padding-top: 2rem;
+    /* background-color: tomato; */
+    
+}
+
+.login_box h1{
+    color: white;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.664);
+    top: 0;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.login_box label{
+    margin-top: 1rem;
+    color: white;
+    font-weight: 100;
+    font-size: 0.8rem;
+}
+
+.login_box input{
+    margin-top: 1rem;
+    padding-left: 0.5rem;
+    background-color: rgba(146, 146, 146, 0.055);
+    backdrop-filter: blur(2);
+    
+    border-style: none;
+    width: 20rem;
+    height: 4rem;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 2rem;
+    outline: none;
+    transition: 0.3s;
+    
+} 
+
+.login_box input:hover{
+    scale: 1.02;
+    background-color: rgba(146, 146, 146, 0.164);
+    backdrop-filter: blur(1px);
+    
+}
+
+
+input::placeholder{
+    color: rgba(255, 255, 255, 0.89);
+}
+
+.login_box .enter_btn{
+    margin-top: 17rem;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    border-style: none;
+    background-color: white;
+    color: #26228f;
+    font-size: 1.3rem;
+    transition: 0.3s;
+}
+
+.login_box .enter_btn:hover{
+    scale: 1.05;
+    box-shadow: 0 7px 10px 5px rgba(0, 0, 0, 0.5);
+    background-color: #26228f;
+    color: white;
+
+}
+
+
+.navegador{
+    position: fixed;
+    width: 100vw;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #26228f;
+    box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.192);
+}
+
+.navegador img{
+    position: absolute;
+    left: 0;
+    height: 3rem;
+}
+
+.navegador li{
+    list-style: none;
+    width: 6rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background-color: rgb(1, 1, 85);
+    transition: 0.3s;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.navegador li:hover{
+    scale: 1.05;
+    background-color: rgb(2, 2, 117);
+}
+
+
+.navegador li a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+
+
+.frame{
+    margin-top: 3rem;
+    width: 100vw;
+    height: 100%;
+}

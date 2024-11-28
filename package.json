@@ -1,0 +1,23 @@
+{
+  "name": "decoli-dashboard",
+  "version": "1.0.0",
+  "description": "Painel de monitoramento de metas",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emberlink-cn/Decoli-Dashboard.git"
+  },
+  "author": "Emberlink",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Emberlink-cn/Decoli-Dashboard/issues"
+  },
+  "homepage": "https://github.com/Emberlink-cn/Decoli-Dashboard#readme",
+  "devDependencies": {
+    "electron": "^33.2.1"
+  }
+}
