@@ -35,23 +35,56 @@ body::-webkit-scrollbar{
     left: 0;
     z-index: 900;
     width: 100vw;
-    height: 110vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #26228f;
-    background-image: url(https://www.drul.com.br/wp-content/uploads/2023/02/daszf-copia.jpg);
+    /* background-image: url(https://www.drul.com.br/wp-content/uploads/2023/02/daszf-copia.jpg); */
     background-attachment: fixed;
     background-size: cover;
     /* visibility: hidden; */
-    transition: 0.7s;
+    transition: 0.2s;
 }
 
 .hideModal{
     top: -120vh;
+    transition: 0.7s;
+}
+
+.theme_box{
+    position: absolute;
+    top: -1rem;
+    left: -3rem;
+    width: 180px;
+    height: 100px;
+    border-bottom-right-radius: 6rem;
+    opacity: 0.05;
+    background-size: contain;
+}
+
+.theme_box:hover{
+    scale: 7;
+    top: 2rem;
+    left: 3rem;
+    opacity: 0.2;
+    box-shadow: 0px 75px 75px 125px #2e28dd;
+    filter: blur(1px);
 
 }
+
+
+.background_padrao{
+    background-color: #26228f;
+    transition: all 0.3s;
+}
+
+.background_alt-1{
+    background-image: url(https://www.drul.com.br/wp-content/uploads/2023/02/daszf-copia.jpg);
+    transition: all 0.3s;
+}
+
 
 /* botão de atalho para mapa (vendedores) */
 #link_mapas{
@@ -171,9 +204,10 @@ input::placeholder{
     height: 3rem;
     display: flex;
     align-items: center;
-    justify-content: start;
-    gap: 2rem;
-    padding-left: 12rem;
+    justify-content: space-between;
+    /* gap: 2rem; */
+    padding-left: 10.7rem;
+    padding-right: 2rem;
     background-color: #26228f;
     box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.192);
 }
@@ -184,12 +218,15 @@ input::placeholder{
     height: 3rem;
 }
 
+.nav-links{
+    display: flex;
+}
+
 .navegador li{
     list-style: none;
     width: 6rem;
-    height: 2rem;
-    border-radius: 1rem;
-    background-color: rgb(1, 1, 85);
+    height: 3rem;
+    background-color: #26228f;
     transition: 0.3s;
     display: flex;
     text-align: center;
@@ -197,8 +234,8 @@ input::placeholder{
 }
 
 .navegador li:hover{
-    scale: 1.05;
-    background-color: rgb(2, 2, 117);
+    background-color: rgb(255, 255, 255);
+
 }
 
 
@@ -209,12 +246,42 @@ input::placeholder{
     height: 100%;
     font-size: 0.8rem;
     font-weight: 700;
-    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: tomato; */
 }
 
+.navegador li a:hover{
+    color: #26228f;
+}
+
+.navegador #hide_btn{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    width: 6rem;
+    height: 3rem;
+    transition: 0.3s;
+    cursor: pointer;
+
+}
+
+.navegador #hide_btn:hover{
+    background-color: rgb(255, 0, 0);
+
+}
+
+.navegador #hide_btn a{
+    text-decoration: none;
+    color: white;
+
+}
 
 .frame{
-    margin-top: 3rem;
+    padding-top: 3rem;
     width: 100vw;
     height: 100%;
 }
