@@ -12,7 +12,7 @@ html {
 
 body{
     background-color: black;
-    width: 200vw;
+    width: 300vw;
     height: 100vh;
     display: flex;
 }
@@ -32,7 +32,7 @@ body::-webkit-scrollbar{
 .login_modal{
     position: absolute;
     top: 0;
-    left: 0;
+    left: 200vw;
     z-index: 900;
     width: 100vw;
     height: 100vh;
@@ -56,19 +56,19 @@ body::-webkit-scrollbar{
 .theme_box{
     position: absolute;
     top: -1rem;
-    left: -3rem;
+    right: -3rem;
     width: 180px;
     height: 100px;
-    border-bottom-right-radius: 6rem;
+    border-bottom-left-radius: 6rem;
     opacity: 0.05;
     background-size: contain;
 }
 
 .theme_box:hover{
-    scale: 7;
+    scale: 5;
     top: 2rem;
-    left: 3rem;
-    opacity: 0.2;
+    right: 3rem;
+    opacity: 0.6;
     box-shadow: 0px 75px 75px 125px #2e28dd;
     filter: blur(1px);
 
@@ -87,10 +87,10 @@ body::-webkit-scrollbar{
 
 
 /* botão de atalho para mapa (vendedores) */
-#link_mapas{
+#link_inicio{
     position: absolute;
     top: 3rem;
-    right: 5rem;
+    left: 5rem;
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
