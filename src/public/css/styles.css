@@ -12,7 +12,7 @@ html {
 
 body{
     background-color: black;
-    width: 300vw;
+    width: 400vw;
     height: 100vh;
     display: flex;
 }
@@ -32,7 +32,7 @@ body::-webkit-scrollbar{
 .login_modal{
     position: absolute;
     top: 0;
-    left: 200vw;
+    left: 300vw;
     z-index: 900;
     width: 100vw;
     height: 100vh;
