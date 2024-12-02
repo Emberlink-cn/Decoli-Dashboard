@@ -286,12 +286,16 @@ input::placeholder{
     height: 100%;
 }
 
+#maps-page{
+
+}
+
 /* Página de abertura */
 
 #logoImg{
     margin: auto;
     width: 65rem;
-    height: 50rem;
+    height: 45rem;
     opacity: 0.2;
 
 }
