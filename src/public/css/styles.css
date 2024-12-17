@@ -53,35 +53,8 @@ body::-webkit-scrollbar{
     transition: 0.7s;
 }
 
-.theme_box{
-    position: absolute;
-    top: -1rem;
-    right: -3rem;
-    width: 180px;
-    height: 100px;
-    border-bottom-left-radius: 6rem;
-    opacity: 0.05;
-    background-size: contain;
-}
-
-.theme_box:hover{
-    scale: 5;
-    top: 2rem;
-    right: 3rem;
-    opacity: 0.6;
-    box-shadow: 0px 75px 75px 125px #2e28dd;
-    filter: blur(1px);
-
-}
-
-
 .background_padrao{
     background-color: #26228f;
-    transition: all 0.3s;
-}
-
-.background_alt-1{
-    background-image: url(https://www.drul.com.br/wp-content/uploads/2023/02/daszf-copia.jpg);
     transition: all 0.3s;
 }
 
@@ -218,6 +191,7 @@ input::placeholder{
 }
 
 .nav-links{
+    /* background-color: black; */
     display: flex;
 }
 
@@ -241,12 +215,13 @@ input::placeholder{
 .navegador li a{
     text-decoration: none;
     color: white;
-    width: 100%;
     height: 100%;
+    width: 100%;
     font-size: 0.8rem;
     font-weight: 700;
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: center;
     /* background-color: tomato; */
 }
@@ -255,28 +230,16 @@ input::placeholder{
     color: #26228f;
 }
 
-.navegador #hide_btn{
+.navegador label{
+    /* background-color: lawngreen; */
     display: flex;
     flex-direction: column;
-    text-align: center;
     justify-content: center;
-    color: white;
-    width: 6rem;
+    width: 12rem;
     height: 3rem;
-    transition: 0.3s;
-    cursor: pointer;
-
-}
-
-.navegador #hide_btn:hover{
-    background-color: rgb(255, 0, 0);
-
-}
-
-.navegador #hide_btn a{
-    text-decoration: none;
+    text-align: right;
     color: white;
-
+    cursor: pointer;
 }
 
 .frame{
@@ -284,18 +247,457 @@ input::placeholder{
     padding-top: 3rem;
     width: 100vw;
     height: 100%;
-}
-
-#maps-page{
-
+    overflow: hidden;
 }
 
 /* Página de abertura */
 
-#logoImg{
-    margin: auto;
-    width: 65rem;
-    height: 45rem;
-    opacity: 0.2;
+#inicio{
+    background-image: url(../img/marcadagua.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 30%;
+    background-repeat: no-repeat;
+    display: flex;
+}
 
+.home-login{
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    z-index: 990;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+}
+
+.hideHome-login{
+    margin-top: -120vh;
+    opacity: 0;
+    transition: 0.7s;
+}
+
+#home-login #emberlink-home-logo{
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    width: 10rem;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#home-login #emberlink-home-logo:hover{
+    opacity: 1;
+
+}
+
+.credencial_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25rem;
+    height: 20rem;
+    border-radius: 2rem;
+    /* border: 1px solid rgba(0, 0, 100, 0.425); */
+    box-shadow: 0 5px 15px rgba(2, 2, 158, 0.411);
+    transition: 0.3s;
+}
+
+.credencial_box:hover{
+    box-shadow: 0 15px 18px rgba(2, 2, 158, 0.411);
+    
+}
+
+.credencial_box h1{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    color: #0c0958bd;
+}
+
+.credencial_box label{
+    text-align: left;
+    margin-left: -8rem;
+    font-weight: 600;
+}
+
+.credencial_input{
+    height: 2rem;
+    border-radius: 1rem;
+    outline: none;
+    /* border: 1px solid #26228f; */
+    border: none;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    color: #26228f;
+    box-shadow: inset 0 3px 8px  rgba(0, 0, 0, 0.562);
+    
+}
+
+.credencial_box input::placeholder{
+    color: #26228f8a;
+}
+
+.login_options{
+    width: 12rem;
+    display: flex;
+    justify-content: start;
+}
+
+.login_options input{
+    cursor: pointer;
+}
+
+.login_options label{
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.control_enter_btn{
+    width: 6rem;
+    height: 2rem;
+    margin-top: 1rem;
+    text-align: center;
+    border-radius: 1.5rem;
+    border-style: none;
+    background-color: white;
+    color: #26228f;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.control_enter_btn:hover{
+    scale: 1.02;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    border: 1px solid #26228f;
+
+}
+
+.menu-lateral{
+    /* background-color: tomato; */
+    /* position: fixed; */
+    display: flex;
+    flex-direction: column;
+    width: 12rem;
+    height: 100%;
+    left: 0;
+    padding: 0.5rem;
+    gap: 0.3rem;
+    overflow: auto;
+    box-shadow: 0 5px 15px #26228f77;
+    transition: 0.3s ease-in-out;
+
+}
+
+.hidemenulat{
+    width: 3rem;
+
+}
+
+#hide_lat_menu_btn{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    height: 2rem;
+    opacity: 0.2;
+    transition: 0.1s;
+    cursor: pointer; 
+    padding-right: 0.5rem;
+    overflow: hidden;
+}
+
+#hide_lat_menu_btn:hover{
+    opacity: 1;
+    color: #fff;
+}
+
+#hide_lat_menu_btn svg{
+    color: #26228f;
+    scale: 1.8;   
+}
+
+.menu-lateral a{
+    /* background-color: red; */
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 2rem;
+    width: 100%; 
+    padding-left: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #26228f;
+    text-decoration: none;
+    text-align: left;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.menu-lateral a:hover{
+    background-color: #26228f;
+    color: #fff;
+
+}
+
+.hideNavLatLink{
+    opacity: 0;
+    padding-left: 5rem;
+    transition: 0.3s ease-in-out;
+}
+
+
+.paginas-controle{
+    width: 100%;
+    overflow: auto;
+}
+
+.paginas-controle::-webkit-scrollbar{
+    display: none;
+}
+
+.controlPG{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+.controlPG h2{
+    background-color: #3631c777;
+    width: 100%;
+    border-radius: 2rem;
+    padding-left: 2rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.opassist-table-box{
+    /* background-color: tomato; */
+    max-width: 100%;
+    height: 97%;
+    overflow: auto;
+}
+
+.comercial-table-box{
+    /* background-color: tomato; */
+    margin-top: 0.5rem;
+    max-width: 100%;
+    height: 60%;
+    overflow: auto;
+}
+
+.opassist-table, .comercial-table{
+    border-collapse: collapse;
+    /* border: 1px solid #1f1c5e8e; */
+    width: 100%;
+    cursor: pointer;
+}
+
+.opassist-table thead, .comercial-table thead{
+    
+    /* position: fixed; */
+    position: relative;
+    color: #e7e7e7;
+    font-size: 0.7rem;
+}
+
+.cabecalho-table-opassist th, .cabecalho-table-comercial th{
+    background-color: #3d37da;
+    position: sticky;
+    top: 0;
+    text-align: left;
+}
+
+.nope{
+    width: 4rem;
+    padding-left: 3px;
+}
+
+.clas{
+    width: 6rem;
+}
+
+.vend{
+    width: 6rem;
+}
+
+.oper{
+    width: 4rem;
+}
+
+.statoper{
+    width: 5rem;
+}
+
+.noc{
+    width: 4rem;
+}
+
+.dtcol, .dtent{
+    width: 5rem;
+}
+
+.statcol{
+    width: 8rem;
+}
+
+.corpo-table-opassist, .corpo-table-comercial {
+    font-size: 0.7rem;
+}
+
+
+.table-line:hover{
+    background-color: #3631c777;
+    color: #fff;
+}
+
+
+/* CONTROLES */
+.pesqBox{
+    /* background-color: tomato; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem;
+    gap: 0.5rem;
+    width: 45rem;
+    margin: auto;
+}
+
+.buscador{
+    background-color: white;
+    height: 1.5rem;
+    width: 35rem;
+    padding: 0 1rem;
+    font-size: 0.8rem;
+    border-radius: 0.6rem;
+    border: none;
+    outline: none;
+    
+}
+
+.buscador::placeholder{
+    color: gray;
+    font-weight: 200;
+}
+
+#lblPesqCom, #lblCleanPesqCom, #lblPesqOper, #lblCleanPesqOper{
+    /* background-color: gray; */
+    width: 5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 3px 3px #151352b7;
+    
+}
+
+#lblCleanPesqCom, #lblCleanPesqOper{
+    font-size: 0.8rem;
+
+}
+
+
+#lblPesqCom:hover, #lblCleanPesqCom:hover, #lblPesqOper:hover, #lblCleanPesqOper:hover {
+    background-color: #211e7c;
+    /* font-weight: 600; */
+    transition: 0.3s;
+}
+
+#lblPesqCom:active, #lblCleanPesqCom:active, #lblPesqOper:active, #lblCleanPesqOper:active{
+    background-color: #b0afb4;
+    /* font-weight: 600; */
+    transition: 0.1s;
+}
+
+
+.comercial-controls-box, .operacao-controls-box{
+    background-color: #26228f;
+    width: 100%;
+    height: 8rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+
+}
+
+.comercialOptions, .operacaoOptions{
+    /* background-color: purple; */
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 4rem;
+    margin-top: 1rem;
+}
+
+.newVbox, .editVbox, .infoVbox, .filtObox, .editObox, .infoObox{
+    /* background-color: green; */
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: 30%;
+    height: 4rem;
+
+}
+
+.newVtitleBox, .editVtitleBox, .infoVtitleBox, .filtOtitleBox, .editOtitleBox, .infoOtitleBox{
+    background-color: #211e7c;
+    width: 100%;
+    height: 1.2rem;
+    border-radius: 0.6rem;
+    font-size: 1rem;
+    text-align: center;
+    color: #c7c7c7;
+    /* border-bottom: 1px solid #646288; */
+}
+
+
+.btnsBox{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 2rem;
+    margin-top: 0.5rem;
+}
+
+.newVbtn, .editVbtn, .viewVbtn, .viewMapsBtn, .editObtn, .viewObtn{
+    width: 7rem;
+    font-size: 0.8rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 1rem;
+    outline: none;
+    color: white;
+    box-shadow: 0 3px 3px #151352b7;
+}
+
+.newVbtn:hover, .editVbtn:hover, .viewVbtn:hover, .viewMapsBtn:hover, .editObtn:hover, .viewObtn:hover{
+    background-color: #211e7c;
+    /* font-weight: 600; */
+    transition: 0.3s;
+}
+
+.newVbtn:active, .editVbtn:active, .viewVbtn:active, .viewMapsBtn:active, .newObtn:active, .editObtn:active, .viewObtn:active{
+    background-color: #b0afb4;
+    /* font-weight: 600; */
+    transition: 0.1s;
+}
+
+/* Filtros da operação */
+.Opselect{
+    height: 1.5rem;
+}
+
+
+
+.off{
+    display: none;
 }

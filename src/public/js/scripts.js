@@ -1,45 +1,72 @@
+// scripts de login e navegação
+
+// acesso principal
+const loginBtn = document.querySelector('.control_enter_btn')
+const loginPage = document.querySelector('.home-login')
 // Acesso ao dashboard Power-Bi
 const enterBtn = document.querySelector('.enter_btn')
 const cobertura = document.querySelector('.login_modal')
 const ocultBtn = document.querySelector('#hide_btn')
 const changeThemeBtn = document.querySelector('.theme_box')
+// menu lateral
+const latMenuBtn = document.querySelector('#hide_lat_menu_btn')
 
-enterBtn.addEventListener('click', ()=>{
-// Seleciona os elementos de entrada
-const codigoInput = document.querySelector('#user_name');
-const passwordInput = document.querySelector('#user_password');
 
-// Obtém os valores dos campos
-const codigo = codigoInput.value.trim(); // Remove espaços em branco
-const password = passwordInput.value.trim();
-
-if (codigo === "41.507.924/0001-66" && password === "eduardo/igor") {
-    cobertura.classList.add('hideModal'); // Esconde o modal se login for correto
-} else {
-    alert("Usuário e/ou senha incorretos, tente novamente!"); // Exibe alerta
-    codigoInput.value = ''; // Limpa o campo de nome de usuário
-    passwordInput.value = ''; // Limpa o campo de senha
-    codigoInput.focus(); // Retorna o foco ao campo de nome de usuário
-}
-
-})
-
-// ocultar dashboard
-ocultBtn.addEventListener('click', ()=>{
-    let passwordInput = document.querySelector('#user_password');
-    cobertura.classList.remove('hideModal')
-    // passwordInput.value = ''
+// login inicial
+loginBtn.addEventListener('click', ()=>{
+    // Seleciona os elementos de entrada
+    let codigoInput = document.querySelector('#control_user');
+    let passwordInput = document.querySelector('#control_password');
+    
+    // Obtém os valores dos campos
+    let codigo = codigoInput.value.trim(); // Remove espaços em branco
+    let password = passwordInput.value.trim();
+    
+    if (codigo === "tarcisio" && password === "123") {
+        loginPage.classList.add('hideHome-login'); // Esconde o modal se login for correto
+    } else {
+        alert("Usuário e/ou senha incorretos, tente novamente!"); // Exibe alerta
+        codigoInput.value = ''; // Limpa o campo de nome de usuário
+        passwordInput.value = ''; // Limpa o campo de senha
+        codigoInput.focus(); // Retorna o foco ao campo de nome de usuário
+    }
     
 })
 
-// alterar plano de fundo
+// login dashboard
+enterBtn.addEventListener('click', ()=>{
+    // Seleciona os elementos de entrada
+    let codigoInput = document.querySelector('#user_name');
+    let passwordInput = document.querySelector('#user_password');
+    let hideBtn = document.querySelector('#hide_btn');
 
-changeThemeBtn.addEventListener('click', ()=>{
+    // Obtém os valores dos campos
+    let codigo = codigoInput.value.trim(); // Remove espaços em branco
+    let password = passwordInput.value.trim();
 
-    changeThemeBtn.classList.toggle('background_padrao')
-    changeThemeBtn.classList.toggle('background_alt-1')
-    cobertura.classList.toggle('background_padrao')
-    cobertura.classList.toggle('background_alt-1')
+    if (codigo === "41.507.924/0001-66" && password === "eduardo/igor") {
+        cobertura.classList.add('hideModal'); // Esconde o modal se login for correto
 
+        //exibe o botão de esconder o dashboard
+        hideBtn.classList.add('visible')
+    } else {
+        alert("Usuário e/ou senha incorretos, tente novamente!"); // Exibe alerta
+        codigoInput.value = ''; // Limpa o campo de nome de usuário
+        passwordInput.value = ''; // Limpa o campo de senha
+        codigoInput.focus(); // Retorna o foco ao campo de nome de usuário
+    }
 
 })
+
+// ocultar menu lateral
+latMenuBtn.addEventListener('click', ()=>{
+    let latMenu = document.querySelector('.menu-lateral')
+    let navLinks = document.querySelectorAll('.navLatLink')
+
+    latMenu.classList.toggle('hidemenulat')
+    navLinks.forEach(Element => {
+        Element.classList.toggle('hideNavLatLink')
+    });
+    
+})
+

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decoli Dashboard</title>
+    <title>Decoli</title>
     <!-- estilos -->
     <link rel="stylesheet" href="../public/css/styles.css">
     <!-- ícones -->
@@ -53,20 +53,1445 @@
 
         <div class="nav-links">
 
-            <li id="home-btn"><a href="#inicio">Início</a></li>
+            <li id="home-btn"><a href="#inicio">Decoli Controle</a></li>
             <li id="radar-btn"><a href="#radar-page">Rotas</a></li>
-            <li id="maps-btn"><a href="#maps-page">Vendedores</a></li>
+            <li id="maps-btn"><a href="#maps-page">Mapa de clientes</a></li>
             <li id="bi-btn"><a href="#bi-page">Dashboard</a></li>
         </div>
 
-        <label for="" id="hide_btn"><a href="#bi-page">Ocultar</a></label>
+        <label>Olá Usuário!</label>
         
     </nav>
 
     <!-- página inicial -->
     <section class=frame id="inicio">
 
-        <img id="logoImg" src="../public/img/marcadagua.png" alt="Logo da empresa">
+        <section class="home-login" id="home-login">
+
+
+
+            <div class="credencial_box">
+
+                <h1>Login:</h1>
+
+                <!-- <label for="control_user">Usuário:</label> -->
+                <input class="credencial_input" type="text" id="control_user" placeholder="Usuário:">
+
+                <!-- <label for="control_password">Senha:</label> -->
+                <input class="credencial_input" type="password" id="control_password" placeholder="Senha:">
+
+                <div class="login_options">
+
+                    <input type="checkbox" name="staylog" id="opt_staylog">
+
+                    <label for="opt_staylog">Lembrar usuário</label>
+
+                </div>
+
+                <button class="control_enter_btn">
+                    Entrar
+                </button>
+
+            </div>
+        
+            <img src="../public/img/emberlink-logo-light.png" alt="logo emberlink" id="emberlink-home-logo">
+
+        </section>
+
+        <div class="menu-lateral">
+
+            <div id="hide_lat_menu_btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
+            </div>
+
+            <a class="navLatLink" href="#opAssist">Operação assistida</a>
+            <a class="navLatLink" href="#comercial">Comercial</a>
+            <a class="navLatLink" href="#operacao">Operação</a>
+            <a class="navLatLink" href="#fiscal">Fiscal</a>
+            <a class="navLatLink" href="#cadastros">Cadastros</a>
+            <a class="navLatLink" href="#usuarios">Usuários</a>
+            <a class="navLatLink" href="#">Dashboard</a>
+
+        </div>
+
+        <section class="paginas-controle">
+            
+            <div class="controlPG" id="opAssist">
+
+                <h2>Operação Assistida</h2>
+
+                <div class="opassist-table-box">
+                    <table class="opassist-table">
+                        <thead class="cabecalho-table-opassist">
+                            <tr>
+                                <th class="nope">Nº OP</th>
+                                <th class="clas">Classe</th>
+                                <th class="vend">Vendedor</th>
+                                <th class="oper">Operador</th>
+                                <th class="remet">1º Remetente</th>
+                                <th class="destin">1º Destinatário</th>
+                                <th class="statoper">Status Oper.</th>
+                                <th class="noc">Nº OC</th>
+                                <th class="dtcol">Data Coleta</th>
+                                <th class="statcol">Status Coleta</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="corpo-table-opassist">
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">Nº OP</td>
+                                <td class="clas">Classe</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <td class="remet">1º Remetente</td>
+                                <td class="destin">1º Destinatário</td>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <td class="statcol">Status Coleta</td>
+                            </tr>
+ 
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+            </div>
+
+            <div class="controlPG" id="comercial">
+                <h2>Comercial</h2>
+
+                <div class="comercial-controls-box">
+
+                    <div class="pesqBox">
+                        <input type="search" name="buscadorComercial" class="buscador" id="buscarComercial" placeholder="Buscar">
+                        <label class="search-btn" id="lblPesqCom" for="buscadorComercial">Procurar</label>
+                        <label class="clean-search-btn" id="lblCleanPesqCom" for="buscadorComercial">Limpar busca</label>
+                    </div>
+
+                    <div class="comercialOptions">
+
+                        <div class="newVbox">
+                            <div class="newVtitleBox">
+                                <p>Nova venda:</p>
+                            </div>
+                            <div class="btnsBox">
+                                <button class="newVbtn" id="newNormBtn">Norm./Emerg.</button>
+                                <button class="newVbtn" id="newColBtn">Col. Fracionada</button>
+                                <button class="newVbtn" id="newEntBtn">Ent. Fracionada</button>
+                            </div>
+                        </div>
+
+                        <div class="editVbox">
+                            <div class="editVtitleBox">
+                                <p>Edição:</p>
+                            </div>
+                        
+                            <div class="btnsBox">
+                                <button class="editVbtn" id="editVBtn">Editar venda</button>
+                                <button class="editVbtn" id="deleteVBtn">Excluir Venda</button>
+                            </div>
+                        </div>
+
+                        <div class="infoVbox">
+                            <div class="infoVtitleBox">
+                                <p>Informações:</p>
+                            </div>
+                        
+                            <div class="btnsBox">
+                                <button class="viewVbtn" id="viewPdfVBtn">Ver PDF: </button>
+
+                                <button class="viewMapsBtn" id="viewMaps">Mapa de clientes </button>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="comercial-table-box">
+                    <table class="comercial-table">
+                        <thead class="cabecalho-table-comercial">
+                            <tr>
+                                <th class="nope">Nº OP</th>
+                                <th class="clas">Classe</th>
+                                <th class="vend">Vendedor</th>
+                                <th class="oper">Operador</th>
+                                <th class="client">Cliente</th>
+                                <th class="statoper">Status Oper.</th>
+                                <th class="noc">Nº OC</th>
+                                <th class="dtcol">Data Coleta</th>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="corpo-table-comercial">
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            
+ 
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+
+            <div class="controlPG" id="operacao">
+                
+                <h2>Operação</h2>
+
+                <div class="operacao-controls-box">
+
+                    <div class="pesqBox">
+
+
+                        <input type="search" name="buscadorOperacao" class="buscador" id="buscarOperacao" placeholder="Buscar">
+                        <label class="search-btn" id="lblPesqOper" for="buscadorOperacao">Procurar</label>
+                        <label class="clean-search-btn" id="lblCleanPesqOper" for="buscadorOperacao">Limpar busca</label>
+
+                        
+                        
+                    </div>
+
+                    <div class="operacaoOptions">
+
+                        <div class="filtObox">
+
+                            <div class="filtOtitleBox">
+                                <p>Filtros</p>
+                            </div>
+
+                            <div class="btnsBox">
+
+                                
+                                <select name="OpFiltro" class="Opselect" id="operFiltro" multiple="multiple">
+
+                                    <option value="vazio"></option>
+
+                                    <option value="coletHoje">Coletar Hoje</option>
+
+                                    <option value="coletAma">Coletar Amanhã</option>
+
+                                    <option value="pendente">Pendentes</option>
+
+                                    <option value="operada">Operadas</option>
+
+                                    <option value="coletada">Coletadas</option>
+
+
+
+                                </select>
+
+                                <select name="OpFiltro2" class="Opselect" id="OperFiltro2">
+
+                                    <option value="vazio"></option>
+
+                                    <option value="Murilo">Murilo</option>
+
+                                    <option value="Lucas">Lucas</option>
+                                </select>   
+
+                            </div>
+                        </div>
+
+                        <div class="editObox">
+                            <div class="editOtitleBox">
+                                <p>Edição:</p>
+                            </div>
+                        
+                            <div class="btnsBox">
+
+                                <button class="editObtn" id="operOBtn">Operar</button>
+
+                                <button class="editObtn" id="editVBtn">Editar OP</button>
+                                <button class="editObtn" id="deleteOBtn">Excluir OP</button>
+                            </div>
+                        </div>
+
+                        <div class="infoObox">
+                            <div class="infoOtitleBox">
+                                <p>Informações:</p>
+                            </div>
+                        
+                            <div class="btnsBox">
+                                <button class="viewObtn" id="viewPdfOBtn">Ver PDF </button>
+
+                                <button class="viewMapsBtn" id="viewMotoMaps">Motoristas </button>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="comercial-table-box">
+                    <table class="comercial-table">
+                        <thead class="cabecalho-table-comercial">
+                            <tr>
+                                <th class="nope">Nº OP</th>
+                                <th class="clas">Classe</th>
+                                <th class="vend">Vendedor</th>
+                                <th class="oper">Operador</th>
+                                <th class="client">Cliente</th>
+                                <th class="statoper">Status Oper.</th>
+                                <th class="noc">Nº OC</th>
+                                <th class="dtcol">Data Coleta</th>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="corpo-table-comercial">
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <td class="nope">0</td>
+                                <td class="clas">Normal</td>
+                                <td class="vend">Vendedor</td>
+                                <td class="oper">Operador</td>
+                                <th class="client">Cliente</th>
+                                <td class="statoper">Status Oper.</td>
+                                <td class="noc">111111</td>
+                                <td class="dtcol">Data Coleta</td>
+                                <th class="dtent">Data entrega</th>
+                            </tr>
+
+                            
+ 
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+
+            <div class="controlPG off" id="fiscal">
+                fiscal
+            </div>
+
+            <div class="controlPG off" id="cadastros">
+                cadastros
+            </div>
+
+
+        </section>
 
 
     </section>
@@ -81,7 +1506,7 @@
 
 
 
-    <!-- scripts -->
+    <!-- scripts de login -->
     <script src="../public/js/scripts.js"></script>
     <!-- icones -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
