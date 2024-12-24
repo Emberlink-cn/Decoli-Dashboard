@@ -428,7 +428,7 @@ input::placeholder{
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    height: 2rem;
+    height: 3rem;
     width: 100%; 
     padding-left: 0.5rem;
     border-radius: 0.5rem;
@@ -444,6 +444,7 @@ input::placeholder{
 .menu-lateral a:hover{
     background-color: #26228f;
     color: #fff;
+    box-shadow: 0 0 5px black;
 
 }
 
@@ -588,7 +589,7 @@ input::placeholder{
     font-weight: 200;
 }
 
-#lblPesqCom, #lblCleanPesqCom, #lblPesqOper, #lblCleanPesqOper{
+#lblPesqCom, #lblCleanPesqCom, #lblPesqOper, #lblCleanPesqOper, #lblPesqFisc, #lblCleanPesqFisc{
     /* background-color: gray; */
     width: 5rem;
     border-radius: 0.5rem;
@@ -601,26 +602,26 @@ input::placeholder{
     
 }
 
-#lblCleanPesqCom, #lblCleanPesqOper{
+#lblCleanPesqCom, #lblCleanPesqOper, #lblCleanPesqFisc{
     font-size: 0.8rem;
 
 }
 
 
-#lblPesqCom:hover, #lblCleanPesqCom:hover, #lblPesqOper:hover, #lblCleanPesqOper:hover {
+#lblPesqCom:hover, #lblCleanPesqCom:hover, #lblPesqOper:hover, #lblCleanPesqOper:hover,#lblPesqFisc:hover, #lblCleanPesqFisc:hover {
     background-color: #211e7c;
     /* font-weight: 600; */
     transition: 0.3s;
 }
 
-#lblPesqCom:active, #lblCleanPesqCom:active, #lblPesqOper:active, #lblCleanPesqOper:active{
+#lblPesqCom:active, #lblCleanPesqCom:active, #lblPesqOper:active, #lblCleanPesqOper:active, #lblPesqFisc:active, #lblCleanPesqFisc:active{
     background-color: #b0afb4;
     /* font-weight: 600; */
     transition: 0.1s;
 }
 
 
-.comercial-controls-box, .operacao-controls-box{
+.comercial-controls-box, .operacao-controls-box, .fiscal-controls-box {
     background-color: #26228f;
     width: 100%;
     height: 8rem;
@@ -629,7 +630,7 @@ input::placeholder{
 
 }
 
-.comercialOptions, .operacaoOptions{
+.comercialOptions, .operacaoOptions, .fiscalOptions {
     /* background-color: purple; */
     display: flex;
     flex-wrap: nowrap;
@@ -638,7 +639,7 @@ input::placeholder{
     margin-top: 1rem;
 }
 
-.newVbox, .editVbox, .infoVbox, .filtObox, .editObox, .infoObox{
+.newVbox, .editVbox, .infoVbox, .filtObox, .editObox, .infoObox, .filtFbox, .editFbox, .infoFbox{
     /* background-color: green; */
     display: flex;
     margin: auto;
@@ -648,7 +649,7 @@ input::placeholder{
 
 }
 
-.newVtitleBox, .editVtitleBox, .infoVtitleBox, .filtOtitleBox, .editOtitleBox, .infoOtitleBox{
+.newVtitleBox, .editVtitleBox, .infoVtitleBox, .filtOtitleBox, .editOtitleBox, .infoOtitleBox, .editFtitleBox, .filtFtitleBox, .infoFtitleBox {
     background-color: #211e7c;
     width: 100%;
     height: 1.2rem;
@@ -668,7 +669,7 @@ input::placeholder{
     margin-top: 0.5rem;
 }
 
-.newVbtn, .editVbtn, .viewVbtn, .viewMapsBtn, .editObtn, .viewObtn{
+.newVbtn, .editVbtn, .viewVbtn, .viewMapsBtn, .editObtn, .viewObtn, .editFbtn, .viewFbtn {
     width: 7rem;
     font-size: 0.8rem;
     background-color: transparent;
@@ -679,25 +680,116 @@ input::placeholder{
     box-shadow: 0 3px 3px #151352b7;
 }
 
-.newVbtn:hover, .editVbtn:hover, .viewVbtn:hover, .viewMapsBtn:hover, .editObtn:hover, .viewObtn:hover{
+.newVbtn:hover, .editVbtn:hover, .viewVbtn:hover, .viewMapsBtn:hover, .editObtn:hover, .viewObtn:hover, .editFbtn:hover, .viewFbtn:hover {
     background-color: #211e7c;
     /* font-weight: 600; */
     transition: 0.3s;
 }
 
-.newVbtn:active, .editVbtn:active, .viewVbtn:active, .viewMapsBtn:active, .newObtn:active, .editObtn:active, .viewObtn:active{
+.newVbtn:active, .editVbtn:active, .viewVbtn:active, .viewMapsBtn:active, .newObtn:active, .editObtn:active, .viewObtn:active, .editFbtn:active, .viewFbtn:active{
     background-color: #b0afb4;
     /* font-weight: 600; */
     transition: 0.1s;
 }
 
 /* Filtros da operação */
-.Opselect{
-    height: 1.5rem;
+.Opselect, .fisselect{
+    height: 1.6rem;
 }
+
+/* Cadastros */
+
+.cadNav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    gap: 0.5rem;
+}
+
+.cadNav li{
+    list-style: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.2s;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+}
+
+.cadNav li:hover{
+    background-color: #211e7c;
+    color: #fff;
+    box-shadow: 0 0 5px black;
+}
+
+.cadNav li:active{
+    background-color: #b0afb4;
+    color: #6d6d6d;
+}
+
+.cadPg{
+    /* background-color: tomato; */
+    width: 100%;
+    height: 80%;
+    overflow: auto;
+
+}
+
+.cadBtnBox{
+    background-color: #211e7c;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.cadBtnBox input{
+    height: 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    margin-left: 1rem;
+    padding: 0 1rem;
+}
+
+.cadBtnBox input::placeholder{
+    color: #6d6d6d;
+}
+
+.cadBtnBox button{
+    background-color: #211e7c;
+    width: 7rem;
+    height: 2rem;
+    margin: auto;
+    color: #fff;
+    border: none;
+    border-radius: 1rem;
+    outline: none;
+    transition: 0.2s;
+}
+
+.cadBtnBox button:hover{
+    box-shadow: 0 3px 3px #151352b7;
+    
+}
+
+.cadBtnBox button:active{
+    background-color: #b0afb4;
+    color: #6d6d6d;
+}
+
+
+
+
 
 
 
 .off{
     display: none;
+}
+
+.CurrentcadNav{
+    background-color: #211e7c;
+    color: #fff;
+    box-shadow: 0 0 5px black;
 }

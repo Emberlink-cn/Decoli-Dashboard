@@ -10,7 +10,7 @@ const createWindow = () => {
     width: 1280,
     height: 720,
     icon: './src/public/img/dark_icone_img.jpg',
-    autoHideMenuBar: true,
+    // autoHideMenuBar: true,
     // resizable: false
     
   })

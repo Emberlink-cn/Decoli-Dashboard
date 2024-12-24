@@ -3,13 +3,28 @@
 // acesso principal
 const loginBtn = document.querySelector('.control_enter_btn')
 const loginPage = document.querySelector('.home-login')
+
 // Acesso ao dashboard Power-Bi
 const enterBtn = document.querySelector('.enter_btn')
 const cobertura = document.querySelector('.login_modal')
 const ocultBtn = document.querySelector('#hide_btn')
 const changeThemeBtn = document.querySelector('.theme_box')
+
 // menu lateral
 const latMenuBtn = document.querySelector('#hide_lat_menu_btn')
+
+// Navegação páginas do controle
+const opAssistBtn = document.querySelector('#opAssistNav')
+const comercBtn = document.querySelector('#comercNav')
+const operBtn = document.querySelector('#operNav')
+const fiscBtn = document.querySelector('#fiscNav')
+const cadBtn = document.querySelector('#cadNav')
+
+// Navegação de cadastros
+const pgClienteBtn = document.querySelector('#navCadClientBtn')
+const pgVendedorBtn = document.querySelector('#navCadVendBtn')
+const pgOperadorBtn = document.querySelector('#navCadOperBtn')
+const pgVeiculoBtn = document.querySelector('#navCadVeicBtn')
 
 
 // login inicial
@@ -70,3 +85,114 @@ latMenuBtn.addEventListener('click', ()=>{
     
 })
 
+// Navegar pelo controle
+
+opAssistBtn.addEventListener('click', ()=>{
+    let pgOpAssist = document.querySelector('#opAssist')
+    let pgComerc = document.querySelector('#comercial')
+    let pgOper = document.querySelector('#operacao')
+    let pgFisc = document.querySelector('#fiscal')
+    let pgCad = document.querySelector('#cadastros')
+
+    pgOpAssistNav.classList.add('CurrentcadNav')
+    pgOpAssist.classList.remove('off')
+
+    pgVendedorBtn.classList.remove('CurrentcadNav')
+    VendPg.classList.add('off')
+
+    pgOperadorBtn.classList.remove('CurrentcadNav')
+    OperPg.classList.add('off')
+
+    pgVeiculoBtn.classList.remove('CurrentcadNav')
+    VeicPg.classList.add('off')
+
+
+})
+
+
+// navegar pelo cadastro
+
+pgClienteBtn.addEventListener('click', ()=>{
+    let ClientPg = document.querySelector('#cadCliente')
+    let VendPg = document.querySelector('#cadVendedor')
+    let OperPg = document.querySelector('#cadOperador')
+    let VeicPg = document.querySelector('#cadVeiculo')
+
+    pgClienteBtn.classList.add('CurrentcadNav')
+    ClientPg.classList.remove('off')
+
+    pgVendedorBtn.classList.remove('CurrentcadNav')
+    VendPg.classList.add('off')
+
+    pgOperadorBtn.classList.remove('CurrentcadNav')
+    OperPg.classList.add('off')
+
+    pgVeiculoBtn.classList.remove('CurrentcadNav')
+    VeicPg.classList.add('off')
+
+
+})
+
+pgVendedorBtn.addEventListener('click', ()=>{
+    let ClientPg = document.querySelector('#cadCliente')
+    let VendPg = document.querySelector('#cadVendedor')
+    let OperPg = document.querySelector('#cadOperador')
+    let VeicPg = document.querySelector('#cadVeiculo')
+
+
+    pgClienteBtn.classList.remove('CurrentcadNav')
+    ClientPg.classList.add('off')
+
+    pgVendedorBtn.classList.add('CurrentcadNav')
+    VendPg.classList.remove('off')
+
+    pgOperadorBtn.classList.remove('CurrentcadNav')
+    OperPg.classList.add('off')
+
+    pgVeiculoBtn.classList.remove('CurrentcadNav')
+    VeicPg.classList.add('off')
+
+
+})
+
+pgOperadorBtn.addEventListener('click', ()=>{
+    let ClientPg = document.querySelector('#cadCliente')
+    let VendPg = document.querySelector('#cadVendedor')
+    let OperPg = document.querySelector('#cadOperador')
+    let VeicPg = document.querySelector('#cadVeiculo')
+
+    pgClienteBtn.classList.remove('CurrentcadNav')
+    ClientPg.classList.add('off')
+
+    pgVendedorBtn.classList.remove('CurrentcadNav')
+    VendPg.classList.add('off')
+
+    pgOperadorBtn.classList.add('CurrentcadNav')
+    OperPg.classList.remove('off')
+
+    pgVeiculoBtn.classList.remove('CurrentcadNav')
+    VeicPg.classList.add('off')
+
+
+})
+
+pgVeiculoBtn.addEventListener('click', ()=>{
+    let ClientPg = document.querySelector('#cadCliente')
+    let VendPg = document.querySelector('#cadVendedor')
+    let OperPg = document.querySelector('#cadOperador')
+    let VeicPg = document.querySelector('#cadVeiculo')
+
+    pgClienteBtn.classList.remove('CurrentcadNav')
+    ClientPg.classList.add('off')
+
+    pgVendedorBtn.classList.remove('CurrentcadNav')
+    VendPg.classList.add('off')
+
+    pgOperadorBtn.classList.remove('CurrentcadNav')
+    OperPg.classList.add('off')
+
+    pgVeiculoBtn.classList.add('CurrentcadNav')
+    VeicPg.classList.remove('off')
+
+
+})

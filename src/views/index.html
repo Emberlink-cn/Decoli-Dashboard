@@ -106,13 +106,12 @@
                 </svg>
             </div>
 
-            <a class="navLatLink" href="#opAssist">Operação assistida</a>
-            <a class="navLatLink" href="#comercial">Comercial</a>
-            <a class="navLatLink" href="#operacao">Operação</a>
-            <a class="navLatLink" href="#fiscal">Fiscal</a>
-            <a class="navLatLink" href="#cadastros">Cadastros</a>
-            <a class="navLatLink" href="#usuarios">Usuários</a>
-            <a class="navLatLink" href="#">Dashboard</a>
+            <a class="navLatLink" id="opAssistNav" href="#opAssist">Operação assistida</a>
+            <a class="navLatLink" id="comercNav" href="#comercial">Comercial</a>
+            <a class="navLatLink" id="operNav" href="#operacao">Operação</a>
+            <a class="navLatLink" id="fiscNav" href="#fiscal">Fiscal</a>
+            <a class="navLatLink" id="cadNav" href="#cadastros">Cadastros</a>
+            <a class="navLatLink" id="dirNav" href="#">Diretoria</a>
 
         </div>
 
@@ -1105,7 +1104,7 @@
                             <div class="btnsBox">
 
                                 
-                                <select name="OpFiltro" class="Opselect" id="operFiltro" multiple="multiple">
+                                <select name="OpFiltro" class="Opselect" id="operFiltro">
 
                                     <option value="vazio"></option>
 
@@ -1144,7 +1143,7 @@
 
                                 <button class="editObtn" id="operOBtn">Operar</button>
 
-                                <button class="editObtn" id="editVBtn">Editar OP</button>
+                                <button class="editObtn" id="editOBtn">Editar OP</button>
                                 <button class="editObtn" id="deleteOBtn">Excluir OP</button>
                             </div>
                         </div>
@@ -1482,12 +1481,836 @@
 
             </div>
 
-            <div class="controlPG off" id="fiscal">
-                fiscal
+            <div class="controlPG" id="fiscal">
+                                
+                <h2>Fiscal</h2>
+
+                <div class="fiscal-controls-box">
+
+                    <div class="pesqBox">
+
+
+                        <input type="search" name="buscadorFiscal" class="buscador" id="buscarOperacrFiscal" placeholder="Buscar">
+                        <label class="search-btn" id="lblPesqFisc" for="buscadorOperacrFiscal">Procurar</label>
+                        <label class="clean-search-btn" id="lblCleanPesqFisc" for="buscadorOperacrFiscal">Limpar busca</label>
+
+                        
+                        
+                    </div>
+
+                    <div class="fiscalOptions">
+
+                        <div class="filtFbox">
+
+                            <div class="filtFtitleBox">
+                                <p>Filtros</p>
+                            </div>
+
+                            <div class="btnsBox">
+
+                                
+                                <select name="FisFiltro" class="fisselect" id="fisFiltro">
+
+                                    <option value="vazio"></option>
+
+                                    <option value="coletHoje">Coletar Hoje</option>
+
+                                    <option value="coletAma">Coletar Amanhã</option>
+
+                                    <option value="pendente">Pendentes</option>
+
+                                    <option value="coletada">Coletadas</option>
+
+                                    <option value="faturada">Faturadas</option>
+
+
+
+                                </select>
+
+                                <select name="FisFiltro2" class="fisselect" id="fisFiltro2">
+
+                                    <option value="vazio"></option>
+
+                                    <option value="Murilo">Murilo</option>
+
+                                    <option value="Lucas">Lucas</option>
+                                </select>   
+
+                            </div>
+                        </div>
+
+                        <div class="editFbox">
+                            <div class="editFtitleBox">
+                                <p>Edição:</p>
+                            </div>
+                        
+                            <div class="btnsBox">
+
+                                <button class="editFbtn" id="operFBtn">Faturar</button>
+                                <button class="editFbtn" id="editFBtn">Editar Fat.</button>
+                        
+                            </div>
+                        </div>
+
+                        <div class="infoFbox">
+                            <div class="infoFtitleBox">
+                                <p>Informações:</p>
+                            </div>
+                        
+                            <div class="btnsBox">
+                                <button class="viewFbtn" id="viewPdfFBtn">Ver PDF </button>
+                                <button class="viewMapsBtn" id="addNfBtn">Anexar Documento</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="comercial-table-box">
+
+                    <table class="comercial-table">
+
+                        <thead class="cabecalho-table-comercial">
+                            <tr>
+                                <th class="nope">Nº OP</th>
+                                <th class="vend">Vendedor</th>
+                                <th class="oper">Operador</th>
+                                <th class="noc">Nº OC</th>
+                                <th class="client">Cliente</th>
+                                <th class="Vmerc">(R$)NF Mercadoria</th>
+                                <th class="Vvenda">(R$) Venda</th>
+                                <th class="Vterc">(R$) Terceiro</th>                                
+                                <th class="dtcol">Data Coleta</th>
+                                <th class="nCte">Nº CTE</th>
+                                <th class="Vfinal">(R$) Final</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="corpo-table-comercial">
+
+                            <tr class="table-line">
+                                <th class="nope">000001</th>
+                                <th class="vend">Tarcisio</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005863</th>
+                                <th class="client">Usina Itajobi</th>
+                                <th class="Vmerc">350.000,00</th>
+                                <th class="Vvenda">9.300,00</th>
+                                <th class="Vterc">5.000,00</th>                                
+                                <th class="dtcol">18/12/2024</th>
+                                <th class="nCte">69932</th>
+                                <th class="Vfinal">9.300,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000002</th>
+                                <th class="vend">Eduardo</th>
+                                <th class="oper">Lucas</th>
+                                <th class="noc">005864</th>
+                                <th class="client">Usina São João</th>
+                                <th class="Vmerc">280.000,00</th>
+                                <th class="Vvenda">2.100,00</th>
+                                <th class="Vterc">800,00</th>                                
+                                <th class="dtcol">19/12/2024</th>
+                                <th class="nCte">69933</th>
+                                <th class="Vfinal">2.100,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000003</th>
+                                <th class="vend">Igor</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005865</th>
+                                <th class="client">Usina Ferrari</th>
+                                <th class="Vmerc">830.000,00</th>
+                                <th class="Vvenda">13.500,00</th>
+                                <th class="Vterc">7.000,00</th>                                
+                                <th class="dtcol">20/12/2024</th>
+                                <th class="nCte">69934</th>
+                                <th class="Vfinal">14.100,00</th>
+                            </tr>
+
+                            
+                            <tr class="table-line">
+                                <th class="nope">000001</th>
+                                <th class="vend">Tarcisio</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005863</th>
+                                <th class="client">Usina Itajobi</th>
+                                <th class="Vmerc">350.000,00</th>
+                                <th class="Vvenda">9.300,00</th>
+                                <th class="Vterc">5.000,00</th>                                
+                                <th class="dtcol">18/12/2024</th>
+                                <th class="nCte">69932</th>
+                                <th class="Vfinal">9.300,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000002</th>
+                                <th class="vend">Eduardo</th>
+                                <th class="oper">Lucas</th>
+                                <th class="noc">005864</th>
+                                <th class="client">Usina São João</th>
+                                <th class="Vmerc">280.000,00</th>
+                                <th class="Vvenda">2.100,00</th>
+                                <th class="Vterc">800,00</th>                                
+                                <th class="dtcol">19/12/2024</th>
+                                <th class="nCte">69933</th>
+                                <th class="Vfinal">2.100,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000003</th>
+                                <th class="vend">Igor</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005865</th>
+                                <th class="client">Usina Ferrari</th>
+                                <th class="Vmerc">830.000,00</th>
+                                <th class="Vvenda">13.500,00</th>
+                                <th class="Vterc">7.000,00</th>                                
+                                <th class="dtcol">20/12/2024</th>
+                                <th class="nCte">69934</th>
+                                <th class="Vfinal">14.100,00</th>
+                            </tr>
+
+                            
+                            <tr class="table-line">
+                                <th class="nope">000001</th>
+                                <th class="vend">Tarcisio</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005863</th>
+                                <th class="client">Usina Itajobi</th>
+                                <th class="Vmerc">350.000,00</th>
+                                <th class="Vvenda">9.300,00</th>
+                                <th class="Vterc">5.000,00</th>                                
+                                <th class="dtcol">18/12/2024</th>
+                                <th class="nCte">69932</th>
+                                <th class="Vfinal">9.300,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000002</th>
+                                <th class="vend">Eduardo</th>
+                                <th class="oper">Lucas</th>
+                                <th class="noc">005864</th>
+                                <th class="client">Usina São João</th>
+                                <th class="Vmerc">280.000,00</th>
+                                <th class="Vvenda">2.100,00</th>
+                                <th class="Vterc">800,00</th>                                
+                                <th class="dtcol">19/12/2024</th>
+                                <th class="nCte">69933</th>
+                                <th class="Vfinal">2.100,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000003</th>
+                                <th class="vend">Igor</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005865</th>
+                                <th class="client">Usina Ferrari</th>
+                                <th class="Vmerc">830.000,00</th>
+                                <th class="Vvenda">13.500,00</th>
+                                <th class="Vterc">7.000,00</th>                                
+                                <th class="dtcol">20/12/2024</th>
+                                <th class="nCte">69934</th>
+                                <th class="Vfinal">14.100,00</th>
+                            </tr>
+
+                            
+                            <tr class="table-line">
+                                <th class="nope">000001</th>
+                                <th class="vend">Tarcisio</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005863</th>
+                                <th class="client">Usina Itajobi</th>
+                                <th class="Vmerc">350.000,00</th>
+                                <th class="Vvenda">9.300,00</th>
+                                <th class="Vterc">5.000,00</th>                                
+                                <th class="dtcol">18/12/2024</th>
+                                <th class="nCte">69932</th>
+                                <th class="Vfinal">9.300,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000002</th>
+                                <th class="vend">Eduardo</th>
+                                <th class="oper">Lucas</th>
+                                <th class="noc">005864</th>
+                                <th class="client">Usina São João</th>
+                                <th class="Vmerc">280.000,00</th>
+                                <th class="Vvenda">2.100,00</th>
+                                <th class="Vterc">800,00</th>                                
+                                <th class="dtcol">19/12/2024</th>
+                                <th class="nCte">69933</th>
+                                <th class="Vfinal">2.100,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000003</th>
+                                <th class="vend">Igor</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005865</th>
+                                <th class="client">Usina Ferrari</th>
+                                <th class="Vmerc">830.000,00</th>
+                                <th class="Vvenda">13.500,00</th>
+                                <th class="Vterc">7.000,00</th>                                
+                                <th class="dtcol">20/12/2024</th>
+                                <th class="nCte">69934</th>
+                                <th class="Vfinal">14.100,00</th>
+                            </tr>
+
+                            
+                            <tr class="table-line">
+                                <th class="nope">000001</th>
+                                <th class="vend">Tarcisio</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005863</th>
+                                <th class="client">Usina Itajobi</th>
+                                <th class="Vmerc">350.000,00</th>
+                                <th class="Vvenda">9.300,00</th>
+                                <th class="Vterc">5.000,00</th>                                
+                                <th class="dtcol">18/12/2024</th>
+                                <th class="nCte">69932</th>
+                                <th class="Vfinal">9.300,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000002</th>
+                                <th class="vend">Eduardo</th>
+                                <th class="oper">Lucas</th>
+                                <th class="noc">005864</th>
+                                <th class="client">Usina São João</th>
+                                <th class="Vmerc">280.000,00</th>
+                                <th class="Vvenda">2.100,00</th>
+                                <th class="Vterc">800,00</th>                                
+                                <th class="dtcol">19/12/2024</th>
+                                <th class="nCte">69933</th>
+                                <th class="Vfinal">2.100,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000003</th>
+                                <th class="vend">Igor</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005865</th>
+                                <th class="client">Usina Ferrari</th>
+                                <th class="Vmerc">830.000,00</th>
+                                <th class="Vvenda">13.500,00</th>
+                                <th class="Vterc">7.000,00</th>                                
+                                <th class="dtcol">20/12/2024</th>
+                                <th class="nCte">69934</th>
+                                <th class="Vfinal">14.100,00</th>
+                            </tr>
+
+                            
+                            <tr class="table-line">
+                                <th class="nope">000001</th>
+                                <th class="vend">Tarcisio</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005863</th>
+                                <th class="client">Usina Itajobi</th>
+                                <th class="Vmerc">350.000,00</th>
+                                <th class="Vvenda">9.300,00</th>
+                                <th class="Vterc">5.000,00</th>                                
+                                <th class="dtcol">18/12/2024</th>
+                                <th class="nCte">69932</th>
+                                <th class="Vfinal">9.300,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000002</th>
+                                <th class="vend">Eduardo</th>
+                                <th class="oper">Lucas</th>
+                                <th class="noc">005864</th>
+                                <th class="client">Usina São João</th>
+                                <th class="Vmerc">280.000,00</th>
+                                <th class="Vvenda">2.100,00</th>
+                                <th class="Vterc">800,00</th>                                
+                                <th class="dtcol">19/12/2024</th>
+                                <th class="nCte">69933</th>
+                                <th class="Vfinal">2.100,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000003</th>
+                                <th class="vend">Igor</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005865</th>
+                                <th class="client">Usina Ferrari</th>
+                                <th class="Vmerc">830.000,00</th>
+                                <th class="Vvenda">13.500,00</th>
+                                <th class="Vterc">7.000,00</th>                                
+                                <th class="dtcol">20/12/2024</th>
+                                <th class="nCte">69934</th>
+                                <th class="Vfinal">14.100,00</th>
+                            </tr>
+
+                            
+                            <tr class="table-line">
+                                <th class="nope">000001</th>
+                                <th class="vend">Tarcisio</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005863</th>
+                                <th class="client">Usina Itajobi</th>
+                                <th class="Vmerc">350.000,00</th>
+                                <th class="Vvenda">9.300,00</th>
+                                <th class="Vterc">5.000,00</th>                                
+                                <th class="dtcol">18/12/2024</th>
+                                <th class="nCte">69932</th>
+                                <th class="Vfinal">9.300,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000002</th>
+                                <th class="vend">Eduardo</th>
+                                <th class="oper">Lucas</th>
+                                <th class="noc">005864</th>
+                                <th class="client">Usina São João</th>
+                                <th class="Vmerc">280.000,00</th>
+                                <th class="Vvenda">2.100,00</th>
+                                <th class="Vterc">800,00</th>                                
+                                <th class="dtcol">19/12/2024</th>
+                                <th class="nCte">69933</th>
+                                <th class="Vfinal">2.100,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000003</th>
+                                <th class="vend">Igor</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005865</th>
+                                <th class="client">Usina Ferrari</th>
+                                <th class="Vmerc">830.000,00</th>
+                                <th class="Vvenda">13.500,00</th>
+                                <th class="Vterc">7.000,00</th>                                
+                                <th class="dtcol">20/12/2024</th>
+                                <th class="nCte">69934</th>
+                                <th class="Vfinal">14.100,00</th>
+                            </tr>
+
+                            
+                            <tr class="table-line">
+                                <th class="nope">000001</th>
+                                <th class="vend">Tarcisio</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005863</th>
+                                <th class="client">Usina Itajobi</th>
+                                <th class="Vmerc">350.000,00</th>
+                                <th class="Vvenda">9.300,00</th>
+                                <th class="Vterc">5.000,00</th>                                
+                                <th class="dtcol">18/12/2024</th>
+                                <th class="nCte">69932</th>
+                                <th class="Vfinal">9.300,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000002</th>
+                                <th class="vend">Eduardo</th>
+                                <th class="oper">Lucas</th>
+                                <th class="noc">005864</th>
+                                <th class="client">Usina São João</th>
+                                <th class="Vmerc">280.000,00</th>
+                                <th class="Vvenda">2.100,00</th>
+                                <th class="Vterc">800,00</th>                                
+                                <th class="dtcol">19/12/2024</th>
+                                <th class="nCte">69933</th>
+                                <th class="Vfinal">2.100,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000003</th>
+                                <th class="vend">Igor</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005865</th>
+                                <th class="client">Usina Ferrari</th>
+                                <th class="Vmerc">830.000,00</th>
+                                <th class="Vvenda">13.500,00</th>
+                                <th class="Vterc">7.000,00</th>                                
+                                <th class="dtcol">20/12/2024</th>
+                                <th class="nCte">69934</th>
+                                <th class="Vfinal">14.100,00</th>
+                            </tr>
+
+                            
+                            <tr class="table-line">
+                                <th class="nope">000001</th>
+                                <th class="vend">Tarcisio</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005863</th>
+                                <th class="client">Usina Itajobi</th>
+                                <th class="Vmerc">350.000,00</th>
+                                <th class="Vvenda">9.300,00</th>
+                                <th class="Vterc">5.000,00</th>                                
+                                <th class="dtcol">18/12/2024</th>
+                                <th class="nCte">69932</th>
+                                <th class="Vfinal">9.300,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000002</th>
+                                <th class="vend">Eduardo</th>
+                                <th class="oper">Lucas</th>
+                                <th class="noc">005864</th>
+                                <th class="client">Usina São João</th>
+                                <th class="Vmerc">280.000,00</th>
+                                <th class="Vvenda">2.100,00</th>
+                                <th class="Vterc">800,00</th>                                
+                                <th class="dtcol">19/12/2024</th>
+                                <th class="nCte">69933</th>
+                                <th class="Vfinal">2.100,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000003</th>
+                                <th class="vend">Igor</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005865</th>
+                                <th class="client">Usina Ferrari</th>
+                                <th class="Vmerc">830.000,00</th>
+                                <th class="Vvenda">13.500,00</th>
+                                <th class="Vterc">7.000,00</th>                                
+                                <th class="dtcol">20/12/2024</th>
+                                <th class="nCte">69934</th>
+                                <th class="Vfinal">14.100,00</th>
+                            </tr>
+
+                            
+                            <tr class="table-line">
+                                <th class="nope">000001</th>
+                                <th class="vend">Tarcisio</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005863</th>
+                                <th class="client">Usina Itajobi</th>
+                                <th class="Vmerc">350.000,00</th>
+                                <th class="Vvenda">9.300,00</th>
+                                <th class="Vterc">5.000,00</th>                                
+                                <th class="dtcol">18/12/2024</th>
+                                <th class="nCte">69932</th>
+                                <th class="Vfinal">9.300,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000002</th>
+                                <th class="vend">Eduardo</th>
+                                <th class="oper">Lucas</th>
+                                <th class="noc">005864</th>
+                                <th class="client">Usina São João</th>
+                                <th class="Vmerc">280.000,00</th>
+                                <th class="Vvenda">2.100,00</th>
+                                <th class="Vterc">800,00</th>                                
+                                <th class="dtcol">19/12/2024</th>
+                                <th class="nCte">69933</th>
+                                <th class="Vfinal">2.100,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000003</th>
+                                <th class="vend">Igor</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005865</th>
+                                <th class="client">Usina Ferrari</th>
+                                <th class="Vmerc">830.000,00</th>
+                                <th class="Vvenda">13.500,00</th>
+                                <th class="Vterc">7.000,00</th>                                
+                                <th class="dtcol">20/12/2024</th>
+                                <th class="nCte">69934</th>
+                                <th class="Vfinal">14.100,00</th>
+                            </tr>
+
+                            
+                            <tr class="table-line">
+                                <th class="nope">000001</th>
+                                <th class="vend">Tarcisio</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005863</th>
+                                <th class="client">Usina Itajobi</th>
+                                <th class="Vmerc">350.000,00</th>
+                                <th class="Vvenda">9.300,00</th>
+                                <th class="Vterc">5.000,00</th>                                
+                                <th class="dtcol">18/12/2024</th>
+                                <th class="nCte">69932</th>
+                                <th class="Vfinal">9.300,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000002</th>
+                                <th class="vend">Eduardo</th>
+                                <th class="oper">Lucas</th>
+                                <th class="noc">005864</th>
+                                <th class="client">Usina São João</th>
+                                <th class="Vmerc">280.000,00</th>
+                                <th class="Vvenda">2.100,00</th>
+                                <th class="Vterc">800,00</th>                                
+                                <th class="dtcol">19/12/2024</th>
+                                <th class="nCte">69933</th>
+                                <th class="Vfinal">2.100,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000003</th>
+                                <th class="vend">Igor</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005865</th>
+                                <th class="client">Usina Ferrari</th>
+                                <th class="Vmerc">830.000,00</th>
+                                <th class="Vvenda">13.500,00</th>
+                                <th class="Vterc">7.000,00</th>                                
+                                <th class="dtcol">20/12/2024</th>
+                                <th class="nCte">69934</th>
+                                <th class="Vfinal">14.100,00</th>
+                            </tr>
+
+                            
+                            <tr class="table-line">
+                                <th class="nope">000001</th>
+                                <th class="vend">Tarcisio</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005863</th>
+                                <th class="client">Usina Itajobi</th>
+                                <th class="Vmerc">350.000,00</th>
+                                <th class="Vvenda">9.300,00</th>
+                                <th class="Vterc">5.000,00</th>                                
+                                <th class="dtcol">18/12/2024</th>
+                                <th class="nCte">69932</th>
+                                <th class="Vfinal">9.300,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000002</th>
+                                <th class="vend">Eduardo</th>
+                                <th class="oper">Lucas</th>
+                                <th class="noc">005864</th>
+                                <th class="client">Usina São João</th>
+                                <th class="Vmerc">280.000,00</th>
+                                <th class="Vvenda">2.100,00</th>
+                                <th class="Vterc">800,00</th>                                
+                                <th class="dtcol">19/12/2024</th>
+                                <th class="nCte">69933</th>
+                                <th class="Vfinal">2.100,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000003</th>
+                                <th class="vend">Igor</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005865</th>
+                                <th class="client">Usina Ferrari</th>
+                                <th class="Vmerc">830.000,00</th>
+                                <th class="Vvenda">13.500,00</th>
+                                <th class="Vterc">7.000,00</th>                                
+                                <th class="dtcol">20/12/2024</th>
+                                <th class="nCte">69934</th>
+                                <th class="Vfinal">14.100,00</th>
+                            </tr>
+
+                            
+                            <tr class="table-line">
+                                <th class="nope">000001</th>
+                                <th class="vend">Tarcisio</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005863</th>
+                                <th class="client">Usina Itajobi</th>
+                                <th class="Vmerc">350.000,00</th>
+                                <th class="Vvenda">9.300,00</th>
+                                <th class="Vterc">5.000,00</th>                                
+                                <th class="dtcol">18/12/2024</th>
+                                <th class="nCte">69932</th>
+                                <th class="Vfinal">9.300,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000002</th>
+                                <th class="vend">Eduardo</th>
+                                <th class="oper">Lucas</th>
+                                <th class="noc">005864</th>
+                                <th class="client">Usina São João</th>
+                                <th class="Vmerc">280.000,00</th>
+                                <th class="Vvenda">2.100,00</th>
+                                <th class="Vterc">800,00</th>                                
+                                <th class="dtcol">19/12/2024</th>
+                                <th class="nCte">69933</th>
+                                <th class="Vfinal">2.100,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000003</th>
+                                <th class="vend">Igor</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005865</th>
+                                <th class="client">Usina Ferrari</th>
+                                <th class="Vmerc">830.000,00</th>
+                                <th class="Vvenda">13.500,00</th>
+                                <th class="Vterc">7.000,00</th>                                
+                                <th class="dtcol">20/12/2024</th>
+                                <th class="nCte">69934</th>
+                                <th class="Vfinal">14.100,00</th>
+                            </tr>
+
+                            
+                            <tr class="table-line">
+                                <th class="nope">000001</th>
+                                <th class="vend">Tarcisio</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005863</th>
+                                <th class="client">Usina Itajobi</th>
+                                <th class="Vmerc">350.000,00</th>
+                                <th class="Vvenda">9.300,00</th>
+                                <th class="Vterc">5.000,00</th>                                
+                                <th class="dtcol">18/12/2024</th>
+                                <th class="nCte">69932</th>
+                                <th class="Vfinal">9.300,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000002</th>
+                                <th class="vend">Eduardo</th>
+                                <th class="oper">Lucas</th>
+                                <th class="noc">005864</th>
+                                <th class="client">Usina São João</th>
+                                <th class="Vmerc">280.000,00</th>
+                                <th class="Vvenda">2.100,00</th>
+                                <th class="Vterc">800,00</th>                                
+                                <th class="dtcol">19/12/2024</th>
+                                <th class="nCte">69933</th>
+                                <th class="Vfinal">2.100,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000003</th>
+                                <th class="vend">Igor</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005865</th>
+                                <th class="client">Usina Ferrari</th>
+                                <th class="Vmerc">830.000,00</th>
+                                <th class="Vvenda">13.500,00</th>
+                                <th class="Vterc">7.000,00</th>                                
+                                <th class="dtcol">20/12/2024</th>
+                                <th class="nCte">69934</th>
+                                <th class="Vfinal">14.100,00</th>
+                            </tr>
+
+                            
+                            <tr class="table-line">
+                                <th class="nope">000001</th>
+                                <th class="vend">Tarcisio</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005863</th>
+                                <th class="client">Usina Itajobi</th>
+                                <th class="Vmerc">350.000,00</th>
+                                <th class="Vvenda">9.300,00</th>
+                                <th class="Vterc">5.000,00</th>                                
+                                <th class="dtcol">18/12/2024</th>
+                                <th class="nCte">69932</th>
+                                <th class="Vfinal">9.300,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000002</th>
+                                <th class="vend">Eduardo</th>
+                                <th class="oper">Lucas</th>
+                                <th class="noc">005864</th>
+                                <th class="client">Usina São João</th>
+                                <th class="Vmerc">280.000,00</th>
+                                <th class="Vvenda">2.100,00</th>
+                                <th class="Vterc">800,00</th>                                
+                                <th class="dtcol">19/12/2024</th>
+                                <th class="nCte">69933</th>
+                                <th class="Vfinal">2.100,00</th>
+                            </tr>
+
+                            <tr class="table-line">
+                                <th class="nope">000003</th>
+                                <th class="vend">Igor</th>
+                                <th class="oper">Murilo</th>
+                                <th class="noc">005865</th>
+                                <th class="client">Usina Ferrari</th>
+                                <th class="Vmerc">830.000,00</th>
+                                <th class="Vvenda">13.500,00</th>
+                                <th class="Vterc">7.000,00</th>                                
+                                <th class="dtcol">20/12/2024</th>
+                                <th class="nCte">69934</th>
+                                <th class="Vfinal">14.100,00</th>
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
             </div>
 
-            <div class="controlPG off" id="cadastros">
-                cadastros
+            <div class="controlPG" id="cadastros">
+                <h2>cadastros</h2>
+
+                <ul class = cadNav>
+                    <li id="navCadClientBtn">Cliente</li>
+                    <li id="navCadVendBtn">Vendedor</li>
+                    <li id="navCadOperBtn">Operador</li>
+                    <li id="navCadVeicBtn">Veículo</li>
+                </ul>
+
+                <div class="cadPg" id="cadCliente">
+
+                    <div class="cadBtnBox">
+
+                        <input type="search" name="buscadorCliente" class="pesqBox" id="pesqCadCliente" placeholder="Buscar Cliente">
+                        
+                        <button id="addCliente">
+                            Novo Cliente
+                        </button>
+
+                    </div>
+
+
+
+
+                </div>
+
+                <div class="cadPg off" id="cadVendedor">
+
+                    <div class="cadBtnBox">
+
+                        <input type="search" name="buscadorVendedor" class="pesqBox" id="pesqCadVendedor" placeholder="Buscar Vendedor">
+                        
+                        <button id="addVendedor">
+                            Novo Vendedor
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="cadPg off" id="cadOperador">
+                    <div class="cadBtnBox">
+
+                        <input type="search" name="buscadorOperador" class="pesqBox" id="pesqCadOperador" placeholder="Buscar Operador">
+                        
+                        <button id="addVendedor">
+                            Novo Operador
+                        </button>
+
+                    </div>
+                </div>
+
+                <div class="cadPg off" id="cadVeiculo">
+                    <div class="cadBtnBox">
+
+                        <input type="search" name="buscadorVeiculo" class="pesqBox" id="pesqCadVeiculo" placeholder="Buscar Veiculo">
+                        
+                        <button id="addVeiculo">
+                            Novo Veículo
+                        </button>
+
+                    </div>
+
+
+                </div>
+
             </div>
 
 
